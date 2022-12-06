@@ -25,6 +25,9 @@ function habilitar(){
     document.getElementById("txtApPaterno").addEventListener("keyup", habilitar);
     document.getElementById("txtApMaterno").addEventListener("keyup", habilitar);
     document.getElementById("btnContinuar").addEventListener("click", () => {
-    //ir a la siguiente página
-    location.href="/html/curp-home.html";
+    //Funcions que se van hacer cuando se de click en el boton
+    localStorage.setItem("name", document.getElementById("txtNombre").value);
+    localStorage.setItem("fname", document.getElementById("txtApPaterno").value);
+    localStorage.setItem("lname", document.getElementById("txtApMaterno").value); 
+    location.href="/html/fechaNacCurp.html";
     });
